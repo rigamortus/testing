@@ -5,7 +5,7 @@ pipeline {
       stage('SSH') {
          steps {
             withCredentials([sshUserPrivateKey(
-                credentialsId: 'jenkins.shipit', 
+                credentialsId: 'prod', 
                 keyFileVariable: 'keyfile')]) {
                     sh '''
 prod=azureuser@48.217.82.28
