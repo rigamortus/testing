@@ -8,7 +8,7 @@ pipeline {
                 credentialsId: 'jenkins.shipit', 
                 keyFileVariable: 'keyfile')]) {
                     sh '''
-prod=centos@192.2.0.10
+prod=azureuser@48.217.82.28
 cmd="docker ps"
 ssh -i "$keyfile" -o StrictHostKeyChecking=no $prod $cmd
                        '''
