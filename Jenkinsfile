@@ -8,7 +8,7 @@ pipeline {
                 credentialsId: 'prod', 
                 keyFileVariable: 'keyfile')]) {
                     sh '''
-prod=azureuser@48.217.82.28
+prod=azureuser@172.208.31.40
 cmd="docker ps"
 ssh -i "$keyfile" -o StrictHostKeyChecking=no $prod $cmd
                        '''
