@@ -11,7 +11,7 @@ else
 fi
 ssh -i "$keyfile" -o StrictHostKeyChecking=no "$targetEnv" <<EOF
 set -euo pipefail
-cd Docker-for-Developers/chapter7
+cd testing
 git fetch
 git reset --hard HEAD
 git checkout -f origin/"$GIT_BRANCH"
