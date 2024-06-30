@@ -7,7 +7,7 @@ pipeline {
  environment {
   registry = 'https://index.docker.io/v1/'
   appName = 'newdocker234'
-  dockerHubUsername = rigamortus
+  dockerHubUsername = 'rigamortus'
  }
  stages {
     stage('build') {
