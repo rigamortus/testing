@@ -1,5 +1,5 @@
 def getImageName(String appName) {
-    return "${appName}:${env.BUILD_NUMBER}"
+    return "${dockerHubUsername}/${appName}:${env.BUILD_NUMBER}"
 }
 
 pipeline {
@@ -7,6 +7,7 @@ pipeline {
  environment {
   registry = 'https://index.docker.io/v1/'
   appName = 'newdocker234'
+  dockerHubUsername = rigamortus
  }
  stages {
     stage('build') {
