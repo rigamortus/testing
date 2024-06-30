@@ -14,7 +14,7 @@ pipeline {
             checkout scm
             script {
                 docker.withRegistry("${registry}", 'shipit.dockerhub.id') {
-                    def image = docker.build(getImageName("${appName}"),"-f ${dockerfile} --network host .")
+                    def image = docker.build(getImageName("${appName}"),"-f Dockerfile --network host .")
                     image.push()
                 }
             }
