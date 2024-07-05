@@ -40,7 +40,7 @@ pipeline {
                     target=${getTarget()}
                     image=${getImageName(appName)}
                     keyfile=${keyfile}
-                    testing/bin/ssh-dep.sh
+                    bin/ssh-dep.sh
                     """
             }
         }
