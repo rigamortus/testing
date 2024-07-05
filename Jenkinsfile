@@ -34,7 +34,7 @@ pipeline {
         steps {
             echo "BRANCH_NAME is ${env.BRANCH_NAME}"
             echo "Deploying to ${getTarget()}"
-            withCredentials([sshUserPrivateKey(credentialsId: '${getTarget()}',keyFileVariable: 'keyfile')]) {
+            withCredentials([sshUserPrivateKey(credentialsId: "${getTarget()}",keyFileVariable: 'keyfile')]) {
                 sh """
                     set -a
                     target=${getTarget()}
