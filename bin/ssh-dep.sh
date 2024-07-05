@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 port=${port:-80}
-prod="${shipit_prod_user}@${shipit_prod_host}"
-staging="${shipit_staging_user}@${shipit_staging_host}"
+prod="${shipit_prod_user}"@"${shipit_prod_host}"
+staging="${shipit_staging_user}"@"${shipit_staging_host}"
 image=${image:-dockerfordevelopers/shipitclicker:latest}
 if [[ "$target" = "staging" ]]; then
     targetEnv="$staging"
