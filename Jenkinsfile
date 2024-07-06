@@ -11,6 +11,10 @@ pipeline {
   registry = 'https://index.docker.io/v1/'
   appName = 'newdocker234'
   dockerHubUsername = 'rigamortus'
+  shipit_prod_host = '48.217.82.28'
+  shipit_prod_user = 'azureuser'
+  shipit_staging_host = '172.178.102.202'
+  shipit_staging_user = 'azureuser'
  }
  stages {
     stage('build') {
